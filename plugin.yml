@@ -1,0 +1,9 @@
+name: EpicHelp
+main: com.intriqued.EpicHelp.EpicHelp
+version: 1.0
+
+commands:
+  epicinfo:
+    description: Shows the help menu!
+  ?:
+    description: Shows the help menu!

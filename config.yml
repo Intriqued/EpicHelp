@@ -1,0 +1,13 @@
+# EpicHelp
+Prefix: '&8[&aEpicHelp&8] '
+# The prefix is only used for the console!
+Lines:
+- '&8&m-------------------'
+- '&7Website:'
+- '&7Discord:'
+- '&7Store:'
+- '&8&m-------------------'
+# Need help? PM me on spigot or add me on skype
+# Skype: intriqued@outlook.com
+Sound: 'ENDERDRAGON_WINGS'
+# This plugin is in beta! Please PM me if you have any issues!
