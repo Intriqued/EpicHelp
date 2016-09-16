@@ -30,19 +30,20 @@ public class EpicHelp
   
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
   {
+      if (!(sender instanceof Player))
+        sender.sendMessage("Only players can run this command!");
+        return true;
+      {
     List<String> list = getConfig().getStringList("Lines");
     for (String playerlist : list) {
-      if ((sender instanceof Player))
-      {
-        Player player = (Player)sender;
-        if (cmd.getName().equalsIgnoreCase("epicinfo")) {
-          player.sendRawMessage(ChatColor.translateAlternateColorCodes('&', playerlist));
-        }
-        if (cmd.getName().equalsIgnoreCase("?")) {
-          player.sendMessage(ChatColor.translateAlternateColorCodes('&', playerlist));
-        }
+      Player player = (Player)sender;
+      if (cmd.getName().equalsIgnoreCase("epicinfo")) {
+        player.sendMessage(ChatColor.translateAlternateColorCodes('&', playerlist));
+      }
+      if (cmd.getName().equalsIgnoreCase("?")) {
+        player.sendMessage(ChatColor.translateAlternateColorCodes('&', playerlist));
       }
     }
-    return false;
+    return true;
   }
 }
