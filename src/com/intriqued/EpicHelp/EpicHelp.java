@@ -16,16 +16,14 @@ public class EpicHelp
 {
   public void onEnable()
   {
-    getLogger().info(getConfig().getString("Prefix") + "has been Enabled.");
     if (!new File(getDataFolder(), "config.yml").exists()) {
       getConfig().options().copyDefaults(true);
     }
     saveConfig();
   }
   
-  public void onDisable()
+  public void onDisable() 
   {
-    getLogger().info(getConfig().getString("Prefix") + "has been Disabled.");
   }
   
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
