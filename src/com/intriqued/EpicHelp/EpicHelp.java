@@ -16,10 +16,8 @@ public class EpicHelp
 {
   public void onEnable()
   {
-    if (!new File(getDataFolder(), "config.yml").exists()) {
-      getConfig().options().copyDefaults(true);
-    }
-    saveConfig();
+    getConfig().getDefaults();
+    saveDefaultConfig();
   }
   
   public void onDisable() 
